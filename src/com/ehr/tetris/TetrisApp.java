@@ -159,6 +159,7 @@ public class TetrisApp extends Application {
                 grid[x][row]--;
             }
         });
+
         rows.forEach(row -> {
             tetrominos.stream().forEach(tetromino -> {
                 tetromino.pieces.stream()
