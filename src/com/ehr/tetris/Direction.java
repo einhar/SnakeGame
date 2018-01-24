@@ -14,15 +14,15 @@ public enum Direction {
         this.y = y;
     }
 
-    public Direction prev() {
-        int nextIndex = ordinal() - 1;
-        if (nextIndex == -1) nextIndex = Direction.values().length - 1;
-        return Direction.values()[nextIndex];
-    }
-
     public Direction next() {
         int nextIndex = ordinal() + 1;
         if (nextIndex == Direction.values().length) nextIndex = 0;
+        return Direction.values()[nextIndex];
+    }
+
+    public Direction prev() {
+        int nextIndex = ordinal() - 1;
+        if (nextIndex == -1) nextIndex = Direction.values().length - 1;
         return Direction.values()[nextIndex];
     }
 
